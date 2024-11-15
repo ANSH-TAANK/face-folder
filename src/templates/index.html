@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Face Detection App</title>
-</head>
-<body>
-    <h1>Face Detection App</h1>
-    <input type="file" id="file-input" accept="image/*" />
-    <button id="upload-button">Detect Face</button>
-    <div id="result"></div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
-
-
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+     <title>Face Detection App</title>
+ </head>
+ <body>
+     <div class="main-container">
+         <header>
+             <h1>AI-Powered Face Detection</h1>
+             <p>Upload an image to analyze and detect faces instantly</p>
+         </header>
+         
+         <div class="card">
+             <div class="upload-section">
+                 <input type="file" id="file-input" accept="image/*" />
+                 <img id="image-preview" src="" alt="Image Preview" style="display:none; max-width: 100%; border-radius: 8px; margin-top: 1rem;" />
+                 <button id="upload-button">Detect Face</button>
+             </div>
+             <div id="result" class="result-display"></div>
+         </div>
+         
+         <footer>
+             <p>Powered by AI &mdash; Detect faces with ease</p>
+         </footer>
+     </div>
+ 
+     <script src="{{ url_for('static', filename='script.js') }}"></script>
+ </body>
+ </html>
